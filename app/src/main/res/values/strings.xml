@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notepad</string>
+    <plurals name="notes_count">
+        <item quantity="zero">No Notes</item>
+        <item quantity="one">%d Note</item>
+        <item quantity="other">%d Notes</item>
+    </plurals>
+</resources>

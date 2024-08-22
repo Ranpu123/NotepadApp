@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FolderCard">
+        <attr name="cardBackground" format="color" />
+        <attr name="pinned" format="boolean" />
+        <attr name="folderName" format="string" />
+        <attr name="totalNotes" format="integer" />
+    </declare-styleable>
+</resources>
