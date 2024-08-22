@@ -9,7 +9,8 @@ A simple and intuitive notepad app built for Android using XML views and the MVP
 - Support for rich-text formatting in notes
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6246d563-8a62-4159-bda2-f0e8373f6804" alt="Image 1" width="30%" />
-  <img src="https://github.com/user-attachments/assets/9d2654d4-4444-4516-89f5-ec17848f494d" alt="Image 2" width="30%" />
-  <img src="https://github.com/user-attachments/assets/2dd1de9b-80c2-45bc-ab21-0de392e66ea4" alt="Image 3" width="30%" />
+  <img src="https://github.com/user-attachments/assets/4578b30a-9022-4ec9-95c8-aa7c228cbb98" alt="Image 1" width="30%" />
+  <img src="https://github.com/user-attachments/assets/d364cbcf-8048-4095-abcb-c23a1ddae6a5" alt="Image 2" width="30%" />
+  <img src="https://github.com/user-attachments/assets/1e4a038d-3313-4e18-8120-8aee36233e0c" alt="Image 3" width="30%" />
 </p>
+
