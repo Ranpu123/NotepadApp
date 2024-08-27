@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Notepad</string>
+    <string name="add_folder">Add Folder</string>
+    <string name="notes">Notes</string>
+    <string name="notepad">Notepad</string>
+    <string name="pinned_folders">Pinned Folders</string>
+    <string name="all_folders">All Folders</string>
+    <string name="note_editor">Note Editor</string>
+    <string name="et_note_editor_hint">Title</string>
+    <string name="add_folder_success">Folder Added</string>
+    <string name="note_editor_add_success">Note Created Successfully</string>
+    <string name="note_editor_update_success">Note Updated Successfully</string>
+    <plurals name="notes_count">
+        <item quantity="zero">No Notes</item>
+        <item quantity="one">%d Note</item>
+        <item quantity="other">%d Notes</item>
+    </plurals>
+</resources>
