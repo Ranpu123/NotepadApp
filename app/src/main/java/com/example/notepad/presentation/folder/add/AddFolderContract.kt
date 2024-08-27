@@ -3,7 +3,7 @@ package com.example.notepad.presentation.folder.add
 interface AddFolderContract {
 
     interface View {
-        fun showSuccessMessage(message: String)
+        fun showSuccessMessage()
         fun showLoading()
         fun hideLoading()
         fun showEditTextError(errorMsg: String)

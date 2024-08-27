@@ -38,7 +38,6 @@ class HomeActivity :
 
         stopKoin()
         startKoin { modules(
-            DatabaseModule,
             HomeModule
         ) }
 

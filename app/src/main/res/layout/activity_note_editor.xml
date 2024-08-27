@@ -22,16 +22,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Note Editor"
+            android:text="@string/note_editor"
             android:textColor="@color/white"
-            android:textSize="22dp" />
+            android:textSize="@dimen/toolbar_title" />
 
         <ImageButton
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/small_margin"
             android:backgroundTint="@android:color/transparent"
             android:src="@drawable/baseline_save_24">
 
@@ -42,12 +42,12 @@
         android:id="@+id/iLNoteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
         <EditText
-            android:hint="Title"
+            android:hint="@string/et_note_editor_hint"
             android:id="@+id/eTNoteTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -66,8 +66,8 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
+        android:layout_margin="@dimen/medium_margin"
+        app:cardCornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toTopOf="@+id/styleBar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -80,7 +80,7 @@
                 android:id="@+id/richEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp" />
+                android:layout_margin="@dimen/small_margin" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -89,7 +89,7 @@
         android:id="@+id/styleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/medium_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

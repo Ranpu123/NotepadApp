@@ -20,9 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Notepad"
+            android:text="@string/notepad"
             android:textColor="@color/white"
-            android:textSize="22dp"/>
+            android:textSize="@dimen/toolbar_title"/>
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
@@ -31,16 +31,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="Pinned Folders"
-        android:textSize="24dp"
+        android:text="@string/pinned_folders"
+        android:textSize="@dimen/section_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rVPinnedFolders"
         android:layout_width="match_parent"
-        android:layout_height="185dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/card_carousel_height"
+        android:layout_marginTop="@dimen/small_margin"
         tools:listitem="@layout/folder_item"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,10 +50,10 @@
         android:id="@+id/tvFolders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small_margin"
         android:fontFamily="sans-serif-black"
-        android:text="All Folders"
-        android:textSize="24dp"
+        android:text="@string/all_folders"
+        android:textSize="@dimen/section_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rVPinnedFolders" />
 
@@ -61,7 +61,7 @@
         android:id="@+id/rVAllFolders"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/small_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -41,7 +41,6 @@ class FolderListActivity : AppCompatActivity(), FolderListContract.View {
 
         stopKoin()
         startKoin { modules(
-            DatabaseModule,
             FolderListModule
         ) }
 

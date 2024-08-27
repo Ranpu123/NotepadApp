@@ -34,24 +34,28 @@ val DatabaseModule = module {
 }
 
 val HomeModule = module {
+    includes(DatabaseModule)
     single<INotepadFileSource> { NotepadLocalFileSource() }
     single { NotepadRepository(get(), get()) }
     single<HomeContract.Presenter> { (view: HomeContract.View) -> HomePresenter(get(), view) }
 }
 
 val FolderListModule = module {
+    includes(DatabaseModule)
     single<INotepadFileSource> { NotepadLocalFileSource() }
     single { NotepadRepository(get(), get()) }
     single<FolderListContract.Presenter> { (view: FolderListContract.View) -> FolderListPresenter(view, get()) }
 }
 
 val AddFolderModule = module {
+    includes(DatabaseModule)
     single<INotepadFileSource> { NotepadLocalFileSource() }
     single { NotepadRepository(get(), get()) }
     single<AddFolderContract.Presenter> { (view: AddFolderContract.View) -> AddFolderPresenter(get(), view, AddFolderUseCase()) }
 }
 
 val NoteEditorModule = module {
+    includes(DatabaseModule)
     single<INotepadFileSource> { NotepadLocalFileSource() }
     single { NotepadRepository(get(), get()) }
     single<NoteEditorContract.Presenter> { (view: NoteEditorContract.View) -> NoteEditorPresenter(view, get(), NoteEditorUseCase(), androidContext()) }

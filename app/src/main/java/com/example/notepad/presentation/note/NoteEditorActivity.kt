@@ -3,8 +3,6 @@ package com.example.notepad.presentation.note
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -15,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.addTextChangedListener
 import com.example.notepad.R
 import com.example.notepad.databinding.ActivityNoteEditorBinding
-import com.example.notepad.di.DatabaseModule
 import com.example.notepad.di.NoteEditorModule
 import org.koin.android.ext.android.inject
 import org.koin.core.context.startKoin
@@ -34,7 +31,6 @@ class NoteEditorActivity : AppCompatActivity(), NoteEditorContract.View {
 
         stopKoin()
         startKoin{ modules(
-                DatabaseModule,
                 NoteEditorModule
             )
         }
@@ -160,8 +156,12 @@ class NoteEditorActivity : AppCompatActivity(), NoteEditorContract.View {
         }
     }
 
-    override fun showSuccessMessage(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    override fun showCreatedSuccessMessage() {
+        Toast.makeText(this, getString(R.string.note_editor_add_success), Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showUpdatedSuccessMessage() {
+        Toast.makeText(this, getString(R.string.note_editor_update_success), Toast.LENGTH_SHORT).show()
     }
 
     override fun showErrorMessage(message: String) {

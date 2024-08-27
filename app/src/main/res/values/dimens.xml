@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="toolbar_title">22dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="section_title">24dp</dimen>
+    <dimen name="card_carousel_height">185dp</dimen>
+    <dimen name="corner_radius">16dp</dimen>
+</resources>

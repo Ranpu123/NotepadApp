@@ -21,7 +21,7 @@ class NoteEditorPresenter(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                view.showSuccessMessage("Note Created Successfully")
+                view.showCreatedSuccessMessage()
                 view.backToList()
             },{
                 view.hideLoading()
@@ -52,7 +52,7 @@ class NoteEditorPresenter(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                view.showSuccessMessage("Note Updated Successfully")
+                view.showUpdatedSuccessMessage()
                 view.backToList()
             },{
                 view.showErrorMessage(it.message ?: "Error Updating Note Data")
@@ -91,12 +91,9 @@ class NoteEditorPresenter(
 
     override fun validate(title: String) {
         view.disableSave()
-        if(title.isNullOrBlank()){
-            view.editTextError("Title cannot be empty")
-            return
-        }
-        if(useCase.validate(title)){
-            view.editTextError("Title can't be bigger than 255 characters")
+        var res = useCase.validate(title)
+        if(res != null){
+            view.editTextError(res)
             return
         }
         view.editTextError(null)

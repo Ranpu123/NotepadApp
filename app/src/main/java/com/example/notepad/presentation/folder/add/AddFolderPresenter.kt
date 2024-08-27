@@ -21,19 +21,17 @@ class AddFolderPresenter(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { view.showSuccessMessage("Folder Added") },
+                { view.showSuccessMessage() },
                 { error -> view.showError(error.message ?: "Error Adding Folder") }
             )
     }
 
     override fun validate(description: String) {
-        if(useCase.validateString(description)){
-            view.showEditTextError("Description cannot be empty")
+        var res = useCase.validate(description)
+        if(res != null){
+            view.showEditTextError(res)
             view.disableAddButton()
-        }else if(useCase.validateSize(description)){
-            view.showEditTextError("Description is too long")
-            view.disableAddButton()
-        }else{
+        } else {
             view.clearEditTextError()
             view.enableAddButton()
         }

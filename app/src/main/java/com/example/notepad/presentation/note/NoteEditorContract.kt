@@ -10,7 +10,9 @@ interface NoteEditorContract {
         fun showRichText(richText: String)
         fun showLoading()
         fun hideLoading()
-        fun showSuccessMessage(message: String)
+        fun showCreatedSuccessMessage()
+        fun showUpdatedSuccessMessage()
+
         fun showErrorMessage(message: String)
         fun enableSave()
         fun disableSave()

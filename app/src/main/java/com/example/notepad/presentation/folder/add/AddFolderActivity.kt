@@ -36,7 +36,6 @@ class AddFolderActivity : AppCompatActivity(), AddFolderContract.View {
 
         stopKoin()
         startKoin { modules(
-            DatabaseModule,
             AddFolderModule,
         ) }
 
@@ -79,8 +78,8 @@ class AddFolderActivity : AppCompatActivity(), AddFolderContract.View {
         }
     }
 
-    override fun showSuccessMessage(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    override fun showSuccessMessage() {
+        Toast.makeText(this, getString(R.string.add_folder_success), Toast.LENGTH_SHORT).show()
         finish()
     }
 
